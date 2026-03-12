@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petals & Promises</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">
+    Petals & Promises
+    <p class="tagline">Fresh Flowers Delivered with Love</p>
+  </div>
+  <nav>
+    <a href="#collections">Collections</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html" class="login-link">Login</a>
+    <a href="register.html" class="register-link">Register</a>
+    <a href="cart.html" class="cart-link">🛒 Cart (<span id="cartCount">0</span>)</a>
+  </nav>
+</header>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Make Every Occasion Bloom</h1>
+    <p>Beautiful flowers, delivered fresh to your doorstep</p>
+    <button onclick="scrollToSection('products')">Shop Now</button>
+  </div>
+  <div class="hero-buttons">
+    <a href="login.html" class="hero-btn">Login</a>
+    <a href="register.html" class="hero-btn">Register</a>
+  </div>
+</section>
+
+<!-- Collections Section -->
+<section id="collections" class="collections">
+<h2>Shop by Collection</h2>
+<div class="collection-grid">
+  <div class="collection-card">
+    <img src="images/new-collection.jpg" alt="New Collection">
+    <h3>New Collection</h3>
+  </div>
+  <div class="collection-card">
+    <img src="images/flowers-box.jpg" alt="Flowers in Box">
+    <h3>Flowers in Box</h3>
+  </div>
+  <div class="collection-card">
+    <img src="images/flowers-vase.jpg" alt="Flowers in Vase">
+    <h3>Flowers in Vase</h3>
+  </div>
+</div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+<h2>Our Best Sellers</h2>
+<div class="product-grid">
+
+  <div class="product-card">
+    <img src="images/product1.jpg" alt="Wild Mix">
+    <h4>Wild Mix – Classic Cubo</h4>
+    <p>₹2,500</p>
+    <button class="customize-btn" data-name="Wild Mix – Classic Cubo" data-price="2500">Customize</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/product2.jpg" alt="Valentino">
+    <h4>Valentino – Bunch</h4>
+    <p>₹3,000</p>
+    <button class="customize-btn" data-name="Valentino – Bunch" data-price="3000">Customize</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/product3.jpg" alt="Blush Vase">
+    <h4>Blush (in a vase)</h4>
+    <p>₹3,500</p>
+    <button class="customize-btn" data-name="Blush (in a vase)" data-price="3500">Customize</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/product4.jpg" alt="Roses Classic">
+    <h4>Roses – Classic Cubo</h4>
+    <p>₹3,200</p>
+    <button class="customize-btn" data-name="Roses – Classic Cubo" data-price="3200">Customize</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/product5.jpg" alt="Gypsos Ronde">
+    <h4>Harlequin Gypsos – Classic Ronde</h4>
+    <p>₹3,800</p>
+    <button class="customize-btn" data-name="Harlequin Gypsos – Classic Ronde" data-price="3800">Customize</button>
+  </div>
+
+</div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="contact-section">
+<h2>Contact Us</h2>
+<form id="contactForm">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 Petals & Promises | All Rights Reserved</p>
+</footer>
+
+<!-- Customization Modal -->
+<div id="customModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalProductName">Product Name</h3>
+    <p>Base Price: ₹<span id="modalProductPrice">0</span></p>
+    
+    <label for="wrapType">Wrapping:</label>
+    <select id="wrapType">
+      <option value="Standard" data-price="0">Standard (+₹0)</option>
+      <option value="Premium" data-price="200">Premium (+₹200)</option>
+    </select>
+
+    <label for="note">Add a Note:</label>
+    <input type="text" id="note" placeholder="Happy Birthday! (+₹50 optional)" />
+
+    <button id="addCustomizedToCart">Add to Cart</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
